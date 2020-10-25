@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $config['app_name'] = 'Project_UAS';
 
-$config['base_url'] = 'http://localhost/project_uas';
+$config['base_url'] = 'http://localhost/project_web';
 
 //Mail Configuration
 $config['MAIL_MAILER'] = 'smtp';
