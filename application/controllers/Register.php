@@ -47,7 +47,7 @@ class Register extends CI_Controller
               'smtp_port' => $this->config->item('MAIL_PORT'),
               'smtp_user' => $this->config->item('MAIL_USERNAME'),
               'smtp_pass' => $this->config->item('MAIL_PASSWORD'),
-              'smtp_username' => $this->config->item(MAIL_NAME''),
+              'smtp_username' => $this->config->item('MAIL_NAME'),
               'mailtype' => 'html',
               'charset' => 'iso-8859-1',
               'wordwrap' => TRUE
