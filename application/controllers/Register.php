@@ -42,12 +42,12 @@ class Register extends CI_Controller
 
             //set up email
             $config = array(
-              'protocol' => 'smtp',
-              'smtp_host' => 'ssl://smtp.gmail.com',
-              'smtp_port' => 465,
-              'smtp_user' => 'cendydwierianto@gmail.com',
-              'smtp_pass' => 'sembarang',
-              'smtp_username' => 'Testing',
+              'protocol' => $this->config->item('MAIL_MAILER'),
+              'smtp_host' => $this->config->item('MAIL_HOST'),
+              'smtp_port' => $this->config->item('MAIL_PORT'),
+              'smtp_user' => $this->config->item('MAIL_USERNAME'),
+              'smtp_pass' => $this->config->item('MAIL_PASSWORD'),
+              'smtp_username' => $this->config->item(MAIL_NAME''),
               'mailtype' => 'html',
               'charset' => 'iso-8859-1',
               'wordwrap' => TRUE

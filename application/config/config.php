@@ -27,6 +27,14 @@ $config['app_name'] = 'Project_UAS';
 
 $config['base_url'] = 'http://localhost/project_uas';
 
+//Mail Configuration
+$config['MAIL_MAILER'] = 'smtp';
+$config['MAIL_HOST'] = 'ssl://smtp.gmail.com';
+$config['MAIL_PORT'] = 465;
+$config['MAIL_USERNAME'] = 'cendydwierianto@gmail.com';
+$config['MAIL_PASSWORD'] = 'Sembarang123+';
+$config['MAIL_NAME'] = 'Admin Ecommerce';
+
 /*
 |--------------------------------------------------------------------------
 | Index File
