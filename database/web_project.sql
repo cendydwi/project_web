@@ -44,9 +44,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `password`, `email`, `role`, `last_login`, `photo`, `created_at`, `token`, `is_active`) VALUES
-(1, '$2y$10$tonZkQrnGnp9n38rWeMTieLPNxtDfvy4Z/35Q4rlFObsm/xFnSae.', 'admin@a.com', 'admin', '2020-10-25 13:01:56', 'user_no_image.jpg', '2020-10-18 15:34:08', '', 1),
-(2, '$2y$10$Dy4ySqOiDqKisEyoKJEsl.L2psUIjeKMwmp5W3iElRQLKZF0.kKbS', 'user@a.com', 'user', '2020-10-18 18:05:20', 'user_no_image.jpg', '2020-10-18 16:23:43', '', 1),
-(21, '$2y$10$pg.XASTpoHrvSeq59src1OH3vUoFgIDSZIN5sqqwV1wksb0Vxa7xa', 'cendydwie47@gmail.com', 'user', '2020-10-25 13:02:13', 'user_no_image.jpg', '2020-10-25 13:00:45', '', 1);
+(1, '$2y$10$tonZkQrnGnp9n38rWeMTieLPNxtDfvy4Z/35Q4rlFObsm/xFnSae.', 'admin@a.com', 'admin', '2020-10-25 13:01:56', 'user_no_image.jpg', '2020-10-18 15:34:08', '', 1),;
 
 --
 -- Indexes for dumped tables
