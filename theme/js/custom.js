@@ -1073,3 +1073,9 @@ $(document).ready(function()
 					});
 				}
 });
+
+$("#cb").click(function(e) {
+  if((e.target).tagName == 'INPUT') return true;
+  e.preventDefault();
+  $("#show").prop("checked", !$("#show").prop("checked"));
+});
