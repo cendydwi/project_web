@@ -23,7 +23,7 @@
             <!-- Recently Viewed Item -->
             <div class="owl-item">
               <div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="viewed_image"><img src="<?= base_url()?>/theme/images/view_1.jpg" alt=""></div>
+                <div class="viewed_image"><img src="<?= base_url()?>theme/images/view_1.jpg" alt=""></div>
                 <div class="viewed_content text-center">
                   <div class="viewed_price">Rp. 225.000</div>
                   <div class="viewed_name"><a href="#">Beoplay H7</a></div>
@@ -38,7 +38,7 @@
             <!-- Recently Viewed Item -->
             <div class="owl-item">
               <div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="viewed_image"><img src="<?= base_url()?>/theme/images/view_2.jpg" alt=""></div>
+                <div class="viewed_image"><img src="<?= base_url()?>theme/images/view_2.jpg" alt=""></div>
                 <div class="viewed_content text-center">
                   <div class="viewed_price">Rp. 379.000</div>
                   <div class="viewed_name"><a href="#">LUNA Smartphone</a></div>
@@ -53,7 +53,7 @@
             <!-- Recently Viewed Item -->
             <div class="owl-item">
               <div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="viewed_image"><img src="<?= base_url()?>/theme/images/view_3.jpg" alt=""></div>
+                <div class="viewed_image"><img src="<?= base_url()?>theme/images/view_3.jpg" alt=""></div>
                 <div class="viewed_content text-center">
                   <div class="viewed_price">Rp. 225.000</div>
                   <div class="viewed_name"><a href="#">Samsung J730F...</a></div>
@@ -68,7 +68,7 @@
             <!-- Recently Viewed Item -->
             <div class="owl-item">
               <div class="viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="viewed_image"><img src="<?= base_url()?>/theme/images/view_4.jpg" alt=""></div>
+                <div class="viewed_image"><img src="<?= base_url()?>theme/images/view_4.jpg" alt=""></div>
                 <div class="viewed_content text-center">
                   <div class="viewed_price">Rp. 379.000</div>
                   <div class="viewed_name"><a href="#">Huawei MediaPad...</a></div>
@@ -83,7 +83,7 @@
             <!-- Recently Viewed Item -->
             <div class="owl-item">
               <div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="viewed_image"><img src="<?= base_url()?>/theme/images/view_5.jpg" alt=""></div>
+                <div class="viewed_image"><img src="<?= base_url()?>theme/images/view_5.jpg" alt=""></div>
                 <div class="viewed_content text-center">
                   <div class="viewed_price">Rp. 225.000</div>
                   <div class="viewed_name"><a href="#">Sony PS4 Slim</a></div>
@@ -98,7 +98,7 @@
             <!-- Recently Viewed Item -->
             <div class="owl-item">
               <div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="viewed_image"><img src="<?= base_url()?>/theme/images/view_6.jpg" alt=""></div>
+                <div class="viewed_image"><img src="<?= base_url()?>theme/images/view_6.jpg" alt=""></div>
                 <div class="viewed_content text-center">
                   <div class="viewed_price">Rp. 375.000</div>
                   <div class="viewed_name"><a href="#">Speedlink...</a></div>
@@ -128,14 +128,14 @@
 
           <div class="owl-carousel owl-theme brands_slider">
 
-            <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?= base_url()?>/theme/images/brands_1.jpg" alt=""></div></div>
-            <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?= base_url()?>/theme/images/brands_2.jpg" alt=""></div></div>
-            <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?= base_url()?>/theme/images/brands_3.jpg" alt=""></div></div>
-            <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?= base_url()?>/theme/images/brands_4.jpg" alt=""></div></div>
-            <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?= base_url()?>/theme/images/brands_5.jpg" alt=""></div></div>
-            <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?= base_url()?>/theme/images/brands_6.jpg" alt=""></div></div>
-            <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?= base_url()?>/theme/images/brands_7.jpg" alt=""></div></div>
-            <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?= base_url()?>/theme/images/brands_8.jpg" alt=""></div></div>
+            <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?= base_url()?>theme/images/brands_1.jpg" alt=""></div></div>
+            <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?= base_url()?>theme/images/brands_2.jpg" alt=""></div></div>
+            <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?= base_url()?>theme/images/brands_3.jpg" alt=""></div></div>
+            <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?= base_url()?>theme/images/brands_4.jpg" alt=""></div></div>
+            <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?= base_url()?>theme/images/brands_5.jpg" alt=""></div></div>
+            <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?= base_url()?>theme/images/brands_6.jpg" alt=""></div></div>
+            <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?= base_url()?>theme/images/brands_7.jpg" alt=""></div></div>
+            <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?= base_url()?>theme/images/brands_8.jpg" alt=""></div></div>
 
           </div>
 
@@ -157,7 +157,7 @@
       <div class="col-lg-3 footer_col">
         <div class="footer_column footer_contact">
           <div class="logo_container">
-            <div class="logo"><a href="#"><img src="<?= base_url()?>/theme/images/Logo.png" alt=""></a></div>
+            <div class="logo"><a href="#"><img src="<?= base_url()?>theme/images/Logo.png" alt=""></a></div>
           </div>
           <div class="footer_title">Got Question? Call Us 24/7</div>
           <div class="footer_phone"><a href="tel:+62000000000000">+62 0000 0000 000</a></div>
@@ -235,10 +235,10 @@
         <div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
           <div class="logos ml-sm-auto">
             <ul class="logos_list">
-              <li><a href="#"><img src="<?= base_url()?>/theme/images/logos_1.png" alt=""></a></li>
-              <li><a href="#"><img src="<?= base_url()?>/theme/images/logos_2.png" alt=""></a></li>
-              <li><a href="#"><img src="<?= base_url()?>/theme/images/logos_3.png" alt=""></a></li>
-              <li><a href="#"><img src="<?= base_url()?>/theme/images/logos_4.png" alt=""></a></li>
+              <li><a href="#"><img src="<?= base_url()?>theme/images/logos_1.png" alt=""></a></li>
+              <li><a href="#"><img src="<?= base_url()?>theme/images/logos_2.png" alt=""></a></li>
+              <li><a href="#"><img src="<?= base_url()?>theme/images/logos_3.png" alt=""></a></li>
+              <li><a href="#"><img src="<?= base_url()?>theme/images/logos_4.png" alt=""></a></li>
             </ul>
           </div>
       </div>
@@ -247,11 +247,11 @@
 </div>
 </div>
 
-<script src="<?= base_url()?>/theme/js/jquery-3.3.1.min.js"></script>
-<script src="<?= base_url()?>/theme/js/carousel.js"></script>
-<script src="<?= base_url()?>/theme/js/TweenMax.min.js"></script>
+<script src="<?= base_url()?>theme/js/jquery-3.3.1.min.js"></script>
+<script src="<?= base_url()?>theme/js/carousel.js"></script>
+<script src="<?= base_url()?>theme/js/TweenMax.min.js"></script>
 <script src="https://kit.fontawesome.com/d50aa71a39.js" crossorigin="anonymous"></script>
-<script src="<?= base_url()?>/theme/js/custom.js"></script>
+<script src="<?= base_url()?>theme/js/custom.js"></script>
 
 </body>
 

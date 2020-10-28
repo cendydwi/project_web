@@ -460,6 +460,13 @@ $(document).ready(function()
 				fn.target.classList.toggle('active');
 			});
 		}
+
+
+		var fav = $('.product_fav_in_product');
+		fav.on('click', function()
+		{
+			fav.toggleClass('active');
+		});
 	}
 
 	/*

@@ -8,9 +8,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="OneTech shop project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="<?= base_url()?>/theme/css/style.css">
-<link rel="stylesheet" href="<?= base_url()?>/theme/css/custom-style.css">
-<link rel="stylesheet" href="<?= base_url()?>/theme/css/responsive-style.css">
+<link rel="stylesheet" href="<?= base_url()?>theme/css/style.css">
+<link rel="stylesheet" href="<?= base_url()?>theme/css/custom-style.css">
+<link rel="stylesheet" href="<?= base_url()?>theme/css/responsive-style.css">
 
 </head>
 
@@ -28,11 +28,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="col d-flex flex-row">
-						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="<?= base_url()?>/theme/images/phone.png" alt=""></div><a href="tel:+62000000000000">+62 0000 0000 0000</a></div>
-						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="<?= base_url()?>/theme/images/mail.png" alt=""></div><a href="mailto:costomer-care@tokorakyat.com">costomer-care@tokorakyat.com</a></div>
+						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="<?= base_url()?>theme/images/phone.png" alt=""></div><a href="tel:+62000000000000">+62 0000 0000 0000</a></div>
+						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="<?= base_url()?>theme/images/mail.png" alt=""></div><a href="mailto:costomer-care@tokorakyat.com">costomer-care@tokorakyat.com</a></div>
 						<div class="top_bar_content ml-auto">
 							<div class="top_bar_user">
-								<div class="user_icon"><img src="<?= base_url()?>/theme/images/user.svg" alt=""></div>
+								<div class="user_icon"><img src="<?= base_url()?>theme/images/user.svg" alt=""></div>
 								<div><a href="#">Register</a></div>
 								<div><a href="#">Sign in</a></div>
 							</div>
@@ -51,7 +51,7 @@
 					<!-- Logo -->
 					<div class="col-lg-2 col-sm-3 col-3 order-1">
 						<div class="logo_container">
-							<div class="logo"><a href="<?= base_url() ?>"><img src="<?= base_url()?>/theme/images/Logo.png" alt=""></a></div>
+							<div class="logo"><a href="<?= base_url() ?>"><img src="<?= base_url()?>theme/images/Logo.png" alt=""></a></div>
 						</div>
 					</div>
 
@@ -76,7 +76,7 @@
 												</ul>
 											</div>
 										</div>
-										<button type="submit" class="header_search_button trans_300" value="Submit"><img src="<?= base_url()?>/theme/images/search.png" alt=""></button>
+										<button type="submit" class="header_search_button trans_300" value="Submit"><img src="<?= base_url()?>theme/images/search.png" alt=""></button>
 									</form>
 								</div>
 							</div>
@@ -87,7 +87,7 @@
 					<div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
 						<div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
 							<div class="wishlist d-flex flex-row align-items-center justify-content-end">
-								<div class="wishlist_icon"><img src="<?= base_url()?>/theme/images/heart.png" alt=""></div>
+								<div class="wishlist_icon"><img src="<?= base_url()?>theme/images/heart.png" alt=""></div>
 								<div class="wishlist_content">
 									<div class="wishlist_text"><a href="#">Wishlist</a></div>
 									<div class="wishlist_count">115</div>
@@ -98,7 +98,7 @@
 							<div class="cart">
 								<div class="cart_container d-flex flex-row align-items-center justify-content-end">
 									<div class="cart_icon">
-										<img src="<?= base_url()?>/theme/images/cart.png" alt="">
+										<img src="<?= base_url()?>theme/images/cart.png" alt="">
 										<div class="cart_count"><span>10</span></div>
 									</div>
 									<div class="cart_content">
@@ -157,7 +157,7 @@
 									<li class="hassubs">
 										<a href="#">Pages<i class="fas fa-chevron-down"></i></a>
 										<ul>
-											<li><a href="<?=base_url()?>/product">Product<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="<?=base_url()?>product">Product<i class="fas fa-chevron-down"></i></a></li>
 										</ul>
 									</li>
 									<li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
@@ -203,7 +203,7 @@
                 <li class="page_menu_item has-children">
                   <a href="#">Pages<i class="fas fa-angle-down"></i></a>
                   <ul class="page_menu_selection">
-                    <li><a href="<?=base_url()?>/product">Product<i class="fas fa-chevron-down"></i></a></li>
+                    <li><a href="<?=base_url()?>product">Product<i class="fas fa-chevron-down"></i></a></li>
                   </ul>
                 </li>
 								<li class="page_menu_item"><a href="blog.html">blog<i class="fa fa-angle-down"></i></a></li>
@@ -211,8 +211,8 @@
 							</ul>
 
 							<div class="menu_contact">
-								<div class="menu_contact_item"><div class="menu_contact_icon"><img src="<?= base_url()?>/theme/images/phone_white.png" alt=""></div><a href="tel:+62000000000000">+62 0000 0000 000</a></div>
-								<div class="menu_contact_item"><div class="menu_contact_icon"><img src="<?= base_url()?>/theme/images/mail_white.png" alt=""></div><a href="mailto:costomer-care@tokorakyat.com">costomer-care@tokorakyat.com</a></div>
+								<div class="menu_contact_item"><div class="menu_contact_icon"><img src="<?= base_url()?>theme/images/phone_white.png" alt=""></div><a href="tel:+62000000000000">+62 0000 0000 000</a></div>
+								<div class="menu_contact_item"><div class="menu_contact_icon"><img src="<?= base_url()?>theme/images/mail_white.png" alt=""></div><a href="mailto:costomer-care@tokorakyat.com">costomer-care@tokorakyat.com</a></div>
 							</div>
 						</div>
 					</div>
