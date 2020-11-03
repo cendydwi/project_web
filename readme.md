@@ -5,4 +5,4 @@ Nama Kelompok:
 3. Muh. Redho Arif Rahman (06.2018.1.06929)
 
 Tugas 1:\
-Membuat 1 atau 2 Laman Web tes
+Membuat 1 atau 2 Laman Web
