@@ -4,6 +4,11 @@ class User_model extends CI_Model
 {
     private $_table = "users";
 
+    public function __construct()
+    {
+      $this->load->model('notif_model');
+    }
+
     public function doLogin(){
 		$post = $this->input->post();
 
@@ -13,24 +18,38 @@ class User_model extends CI_Model
         if($user){
             $isPasswordTrue = password_verify($post["password"], $user->password);
             $isAdmin = $user->role == "admin";
+            $isEmploye = $user->role == "employe";
             $isUser = $user->role == "user";
             $isActive = $user->is_active == 1;
             if ($isPasswordTrue) {
               if ($isActive) {
                 if($isAdmin){
-                    $this->session->set_userdata(['user_logged' => $user]);
                     $this->session->set_userdata(['user_role' => 'admin']);
-                    $this->_updateLastLogin($user->user_id);
-                    return true;
+                }elseif ($isEmploye) {
+                    $this->session->set_userdata(['user_role' => 'employe']);
                 }elseif ($isUser) {
-                    $this->session->set_userdata(['user_logged' => $user]);
                     $this->session->set_userdata(['user_role' => 'user']);
-                    $this->_updateLastLogin($user->user_id);
-                    return true;
                 }
+
+                if ($user->full_name == NULL) {
+                  $this->session->set_userdata(['user_name' => $post['email']]);
+                }else {
+                  $this->session->set_userdata(['user_name' => $user->full_name]);
+                }
+
+                $this->session->set_userdata(['user_id' => $user->user_id]);
+                $this->session->set_userdata(['user_logged' => $user]);
+                $this->_updateLastLogin($user->user_id);
+                return true;
+              }else {
+                  $this->notif_model->notif_danger("Please Verify Your Account");
               }
+            }else {
+                $this->notif_model->notif_danger("Wrong Password");
             }
             return false;
+        }else {
+            $this->notif_model->notif_danger("Email Not Found");
         }
     }
 

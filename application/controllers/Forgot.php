@@ -6,8 +6,9 @@ class Forgot extends CI_Controller
     {
         parent::__construct();
         $this->load->model('user_model');
+        $this->load->model('mail_model');
         $this->load->library('form_validation');
-        if ($this->session->userdata('user_role') == 'admin') {
+        if ($this->session->userdata('user_role') == 'admin' || $this->session->userdata('user_role') == 'employe') {
           redirect('admin');
         }elseif ($this->session->userdata('user_role') == 'user') {
           redirect(base_url());
@@ -29,36 +30,15 @@ class Forgot extends CI_Controller
           $data['token'] = $code;
           $this->user_model->setForgotToken($data, $email);
 
-          $config = array(
-            'protocol' => $this->config->item('MAIL_MAILER'),
-            'smtp_host' => $this->config->item('MAIL_HOST'),
-            'smtp_port' => $this->config->item('MAIL_PORT'),
-            'smtp_user' => $this->config->item('MAIL_USERNAME'),
-            'smtp_pass' => $this->config->item('MAIL_PASSWORD'),
-            'smtp_username' => $this->config->item(MAIL_NAME''),
-            'mailtype' => 'html',
-            'charset' => 'iso-8859-1',
-            'wordwrap' => TRUE
-          );
 
-          $this->load->library('email', $config);
-          $this->email->set_newline("\r\n");
-          $this->email->from($config['smtp_user'], $config['smtp_username']);
-          $this->email->to($email);
-          $this->email->subject('Forgot Password');
           $data = array('id'     => $id,
                         'code'  => $code);
-          $body = $this->load->view('mail/reset.php',$data,TRUE);
-          $this->email->message($body);
+          $body = $this->load->view('mail/reset',$data,TRUE);
+          $message = "Reset code sent to email";
+          $subject = 'Reset Password Email';
+          $this->mail_model->send_email($email, $body, $subject);
+          $this->notif_model->notif_success($message);
 
-          //sending email
-          if($this->email->send()){
-            $this->session->set_flashdata('message','Activation code sent to email');
-          }
-          else{
-            $this->session->set_flashdata('message', $this->email->print_debugger());
-
-          }
           redirect('login');
         }
       }

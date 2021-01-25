@@ -23,17 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['app_name'] = 'Project_Web';
 
-$config['base_url'] = 'http://localhost/project_web';
-
-//Mail Configuration
-$config['MAIL_MAILER'] = 'smtp';
-$config['MAIL_HOST'] = 'ssl://smtp.gmail.com';
-$config['MAIL_PORT'] = 465;
-$config['MAIL_USERNAME'] = 'cendydwierianto@gmail.com';
-$config['MAIL_PASSWORD'] = 'sembarang';
-$config['MAIL_NAME'] = 'Admin Ecommerce';
+$config['base_url'] = 'http://localhost/project-web-backup';
 
 /*
 |--------------------------------------------------------------------------
@@ -168,7 +159,7 @@ $config['composer_autoload'] = FALSE;
 | DO NOT CHANGE THIS UNLESS YOU FULLY UNDERSTAND THE REPERCUSSIONS!!
 |
 */
-$config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
+$config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-@\=\&';
 
 /*
 |--------------------------------------------------------------------------

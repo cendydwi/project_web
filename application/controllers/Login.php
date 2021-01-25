@@ -7,7 +7,8 @@ class Login extends CI_Controller
         parent::__construct();
         $this->load->model('user_model');
         $this->load->library('form_validation');
-        if ($this->session->userdata('user_role') == 'admin') {
+        $this->load->model('notif_model');
+        if ($this->session->userdata('user_role') == 'admin' || $this->session->userdata('user_role') == 'employe') {
           redirect('admin');
         }elseif ($this->session->userdata('user_role') == 'user') {
           redirect(base_url());
@@ -19,15 +20,15 @@ class Login extends CI_Controller
       if ($this->session->userdata('user_logged') == null) {
         if($this->input->post()){
             if($this->user_model->doLogin()){
-              if ($this->session->userdata('user_role') == 'admin') {
-                redirect('admin');
-              }elseif ($this->session->userdata('user_role') == 'user') {
+              if ($this->session->userdata('user_role') == 'admin' || $this->session->userdata('user_role') == 'employe' || $this->session->userdata('user_role') == 'user') {
                 redirect(base_url());
               }
+            }else {
+              redirect(base_url());
             }
+        }else {
+          redirect(base_url());
         }
-        $this->load->view('header');
-        $this->load->view('login');
       }
     }
   }

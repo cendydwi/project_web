@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Product extends CI_Controller {
+class Dotw extends CI_Controller {
 
 	public function __construct()
 	{
@@ -12,16 +12,16 @@ class Product extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->template('product');
+		$this->load->template('dotw');
 	}
 	public function details()
 	{
 		$id=$this->uri->segment(3);
 		if ($id != NULL) {
-			$x['product'] = $this->product_model->getProduct_details($id);
-			$this->load->template('product', $x);
+			$x['dotw'] = $this->product_model->getDotw_details($id);
+			$this->load->template('dotw', $x);
 		}else {
-			$this->load->template('product');
+			$this->load->template('dotw');
 		}
 	}
 }
