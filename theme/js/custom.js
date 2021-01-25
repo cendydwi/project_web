@@ -30,10 +30,11 @@ $(document).ready(function()
 	initReviewsSlider();
 	initViewedSlider();
 	initBrandsSlider();
-	initTimer();
 	initQuantity();
-	initColor();
+	initTimer();
 	initImage();
+	initIsotope();
+	initPriceSlider();
 
 	$(window).on('resize', function()
 	{
@@ -467,6 +468,16 @@ $(document).ready(function()
 		{
 			fav.toggleClass('active');
 		});
+
+		var items = document.getElementsByClassName('shop_product_fav');
+		for(var x = 0; x < items.length; x++)
+		{
+			var item = items[x];
+			item.addEventListener('click', function(fn)
+			{
+				fn.target.classList.toggle('active');
+			});
+		}
 	}
 
 	/*
@@ -1025,8 +1036,11 @@ $(document).ready(function()
 					incButton.on('click', function()
 					{
 						originalVal = input.val();
+						if(originalVal < $('#quantity_input').data('max'))
+						{
 						endVal = parseFloat(originalVal) + 1;
 						input.val(endVal);
+						}
 					});
 
 					decButton.on('click', function()
@@ -1040,23 +1054,6 @@ $(document).ready(function()
 					});
 				}
 			}
-				function initColor()
-				{
-					if($('.product_color').length)
-					{
-						var selectedCol = $('#selected_color');
-						var colorItems = $('.color_list li .color_mark');
-						colorItems.each(function()
-						{
-							var colorItem = $(this);
-							colorItem.on('click', function()
-							{
-								var color = colorItem.css('backgroundColor');
-								selectedCol.css('backgroundColor', color);
-							});
-						});
-					}
-				}
 				function initImage()
 				{
 					var images = $('.image_list li');
@@ -1074,8 +1071,81 @@ $(document).ready(function()
 				}
 });
 
-$("#cb").click(function(e) {
-  if((e.target).tagName == 'INPUT') return true;
-  e.preventDefault();
-  $("#show").prop("checked", !$("#show").prop("checked"));
-});
+function initIsotope()
+	{
+		var sortingButtons = $('.shop_sorting_button');
+
+		$('.shop_product_grid').isotope({
+			itemSelector: '.shop_product_item',
+            getSortData: {
+            	price: function(itemElement)
+            	{
+            		var priceEle = $(itemElement).find('.shop_product_price').text().replace( 'Rp. ', '' ).replace( '.', '');
+            		return parseFloat(priceEle);
+            	},
+            	name: '.shop_product_name div a'
+            },
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+        });
+
+        // Sort based on the value from the sorting_type dropdown
+        sortingButtons.each(function()
+        {
+        	$(this).on('click', function()
+        	{
+        		$('.sorting_text').text($(this).text());
+        		var option = $(this).attr('data-isotope-option');
+        		option = JSON.parse(option);
+				$('.shop_product_grid').isotope(option);
+        	});
+        });
+
+	}
+
+    function initPriceSlider()
+    {
+			var max = $("#slider-range").data('max')*2;
+    	if($("#slider-range").length)
+    	{
+    		$("#slider-range").slider(
+			{
+				range: true,
+				min: 0,
+				max: max,
+				values: [ 0, max/2],
+				slide: function( event, ui )
+				{
+					$( "#amount" ).val( "Rp. " + ui.values[ 0 ] + " - Rp. " + ui.values[ 1 ] );
+				}
+			});
+
+			$( "#amount" ).val( "Rp. " + $( "#slider-range" ).slider( "values", 0 ) + " - Rp. " + $( "#slider-range" ).slider( "values", 1 ) );
+			$('.ui-slider-handle').on('mouseup', function()
+			{
+				$('.shop_product_grid').isotope({
+		            filter: function()
+		            {
+		            	var priceRange = $('#amount').val();
+			        	var priceMin = parseFloat(priceRange.split('-')[0].replace('Rp. ', ''));
+			        	var priceMax = parseFloat(priceRange.split('-')[1].replace('Rp. ', ''));
+			        	var itemPrice = $(this).find('.shop_product_price').clone().children().remove().end().text().replace( 'Rp. ', '' ).replace( '.', '');
+
+			        	return (itemPrice > priceMin) && (itemPrice < priceMax);
+		            },
+		            animationOptions: {
+		                duration: 750,
+		                easing: 'linear',
+		                queue: false
+		            }
+		        });
+			});
+    	}
+    }
+
+function check() {
+		document.getElementById("show").checked = true;
+	}
