@@ -1,121 +1,3 @@
-
-
-<!-- Recently Viewed -->
-
-<div class="viewed">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="viewed_title_container">
-          <h3 class="viewed_title">Recently Viewed</h3>
-          <div class="viewed_nav_container">
-            <div class="viewed_nav viewed_prev"><i class="fas fa-chevron-left"></i></div>
-            <div class="viewed_nav viewed_next"><i class="fas fa-chevron-right"></i></div>
-          </div>
-        </div>
-
-        <div class="viewed_slider_container">
-
-          <!-- Recently Viewed Slider -->
-
-          <div class="owl-carousel owl-theme viewed_slider">
-
-            <!-- Recently Viewed Item -->
-            <div class="owl-item">
-              <div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="viewed_image"><img src="<?= base_url()?>theme/images/view_1.jpg" alt=""></div>
-                <div class="viewed_content text-center">
-                  <div class="viewed_price">Rp. 225.000</div>
-                  <div class="viewed_name"><a href="#">Beoplay H7</a></div>
-                </div>
-                <ul class="item_marks">
-                  <li class="item_mark item_discount">-25%</li>
-                  <li class="item_mark item_new">new</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Recently Viewed Item -->
-            <div class="owl-item">
-              <div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="viewed_image"><img src="<?= base_url()?>theme/images/view_2.jpg" alt=""></div>
-                <div class="viewed_content text-center">
-                  <div class="viewed_price">Rp. 379.000</div>
-                  <div class="viewed_name"><a href="#">LUNA Smartphone</a></div>
-                </div>
-                <ul class="item_marks">
-                  <li class="item_mark item_discount">-25%</li>
-                  <li class="item_mark item_new">new</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Recently Viewed Item -->
-            <div class="owl-item">
-              <div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="viewed_image"><img src="<?= base_url()?>theme/images/view_3.jpg" alt=""></div>
-                <div class="viewed_content text-center">
-                  <div class="viewed_price">Rp. 225.000</div>
-                  <div class="viewed_name"><a href="#">Samsung J730F...</a></div>
-                </div>
-                <ul class="item_marks">
-                  <li class="item_mark item_discount">-25%</li>
-                  <li class="item_mark item_new">new</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Recently Viewed Item -->
-            <div class="owl-item">
-              <div class="viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="viewed_image"><img src="<?= base_url()?>theme/images/view_4.jpg" alt=""></div>
-                <div class="viewed_content text-center">
-                  <div class="viewed_price">Rp. 379.000</div>
-                  <div class="viewed_name"><a href="#">Huawei MediaPad...</a></div>
-                </div>
-                <ul class="item_marks">
-                  <li class="item_mark item_discount">-25%</li>
-                  <li class="item_mark item_new">new</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Recently Viewed Item -->
-            <div class="owl-item">
-              <div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="viewed_image"><img src="<?= base_url()?>theme/images/view_5.jpg" alt=""></div>
-                <div class="viewed_content text-center">
-                  <div class="viewed_price">Rp. 225.000</div>
-                  <div class="viewed_name"><a href="#">Sony PS4 Slim</a></div>
-                </div>
-                <ul class="item_marks">
-                  <li class="item_mark item_discount">-25%</li>
-                  <li class="item_mark item_new">new</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Recently Viewed Item -->
-            <div class="owl-item">
-              <div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="viewed_image"><img src="<?= base_url()?>theme/images/view_6.jpg" alt=""></div>
-                <div class="viewed_content text-center">
-                  <div class="viewed_price">Rp. 375.000</div>
-                  <div class="viewed_name"><a href="#">Speedlink...</a></div>
-                </div>
-                <ul class="item_marks">
-                  <li class="item_mark item_discount">-25%</li>
-                  <li class="item_mark item_new">new</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- Brands -->
 
 <div class="brands">
@@ -160,10 +42,9 @@
             <div class="logo"><a href="#"><img src="<?= base_url()?>theme/images/Logo.png" alt=""></a></div>
           </div>
           <div class="footer_title">Got Question? Call Us 24/7</div>
-          <div class="footer_phone"><a href="tel:+62000000000000">+62 0000 0000 000</a></div>
+          <div class="footer_phone"><a href="tel:<?=$this->db->get_where('settings' , array('key' => 'phone'))->row()->value?>"><?=$this->db->get_where('settings' , array('key' => 'phone'))->row()->value?></a></div>
           <div class="footer_contact_text">
-            <p>Jl. In Dulu Aja, Tanpa Kepastian</p>
-            <p>Yang, Jelas</p>
+            <p><?=$this->db->get_where('settings' , array('key' => 'address'))->row()->value?></p>
           </div>
           <div class="footer_social">
             <ul>
@@ -181,15 +62,19 @@
         <div class="footer_column">
           <div class="footer_title">Find it Fast</div>
           <ul class="footer_list">
-            <li><a href="#">Computers & Laptops</a></li>
-            <li><a href="#">Cameras & Photos</a></li>
-            <li><a href="#">Hardware</a></li>
-            <li><a href="#">Smartphones & Tablets</a></li>
-            <li><a href="#">TV & Audio</a></li>
-          </ul>
-          <div class="footer_subtitle">Gadgets</div>
-          <ul class="footer_list">
-            <li><a href="#">Car Electronics</a></li>
+          <?php $query=$this->db->get('category');
+          $split_cat=round($query->num_rows()/2);
+          $j=0;
+          foreach ($query->result_array() as $cat):
+            $j++;
+            $cat_name=$cat['category_name'];
+            if ($j<=$split_cat) {?>
+              <li><a href="<?= base_url()?>search/searchproduct/<?=$cat_name?>"><?=$cat_name?></a></li>
+            <?php }
+            if ($j==$split_cat) {
+              break;
+            }
+            endforeach;?>
           </ul>
         </div>
       </div>
@@ -197,11 +82,15 @@
       <div class="col-lg-2">
         <div class="footer_column">
           <ul class="footer_list footer_list_2">
-            <li><a href="#">Video Games & Consoles</a></li>
-            <li><a href="#">Accessories</a></li>
-            <li><a href="#">Cameras & Photos</a></li>
-            <li><a href="#">Hardware</a></li>
-            <li><a href="#">Computers & Laptops</a></li>
+            <?php
+            $j=0;
+            foreach ($query->result_array() as $cat):
+              $j++;
+              $cat_name=$cat['category_name'];
+              if ($j>$split_cat) {?>
+                <li><a href="<?= base_url()?>search/searchproduct/<?=$cat_name?>"><?=$cat_name?></a></li>
+              <?php }
+              endforeach;?>
           </ul>
         </div>
       </div>
@@ -250,8 +139,26 @@
 <script src="<?= base_url()?>theme/js/jquery-3.3.1.min.js"></script>
 <script src="<?= base_url()?>theme/js/carousel.js"></script>
 <script src="<?= base_url()?>theme/js/TweenMax.min.js"></script>
+<script src="<?= base_url()?>theme/js/isotope.pkgd.min.js"></script>
+<script src="<?= base_url()?>theme/js/jquery-ui.js"></script>
 <script src="https://kit.fontawesome.com/d50aa71a39.js" crossorigin="anonymous"></script>
 <script src="<?= base_url()?>theme/js/custom.js"></script>
+<script type="text/javascript">
+var BASE_URL = "<?php echo base_url();?>";
+
+$('#searchbtn').click(function () {
+  var category = $('#category_value').text();
+  var search = $('#searchtext').val();
+  $('#displayvalue').attr('action', BASE_URL+'search/searchproduct/'+category+'/'+search);
+});
+
+$('#searchmobile').on('keypress',function(e) {
+    if(e.which == 13) {
+      var search = $('#searchmobile').val();
+      $('#searchmobileform').attr('action', BASE_URL+'search/searchproduct/All%20Categories%20/'+search);
+    }
+});
+</script>
 
 </body>
 

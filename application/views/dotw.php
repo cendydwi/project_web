@@ -10,7 +10,7 @@ if ($url_segment2==null || $url_segment3==null){ ?>
     </div>
   </div>
 <?php }else {
-  if ($product->num_rows() == 0) {?>
+  if ($dotw->num_rows() == 0) {?>
     <div class="single_product">
       <div class="container">
         <div class="row">
@@ -19,13 +19,13 @@ if ($url_segment2==null || $url_segment3==null){ ?>
       </div>
     </div>
   <?php }else {
-    foreach ($product->result_array() as $prod):
+    foreach ($dotw->result_array() as $prod):
       $prod_id=$prod['product_id'];
       $prod_name=$prod['product_name'];
       $prod_cat=$prod['category_name'];
       $prod_desc=$prod['product_desc'];
       $prod_quant=$prod['product_quantity'];
-      $prod_price=$prod['product_price'];
+      $prod_price=$prod['dotw_price'];
       $prod_image_1=$prod['product_image_1'];
       $prod_image_2=$prod['product_image_2'];
       $prod_image_3=$prod['product_image_3'];
